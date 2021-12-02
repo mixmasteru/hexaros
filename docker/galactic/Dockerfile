@@ -56,4 +56,7 @@ RUN apt-get update && apt-get upgrade -y \
     && apt install -y ros-galactic-gazebo-ros-pkgs && apt install -y ros-galactic-xacro \
     && apt install -y ros-galactic-rqt*
 
+RUN ["/bin/bash", "-c", "source /root/ros2_galactic/ros2-linux/setup.bash && env > .env"]
 CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/my_sshd_config"]
+#RUN ["/bin/bash", "-c", "source /root/ros2_galactic/ros2-linux/setup.bash"]
+#CMD /bin/bash -c "/usr/sbin/sshd -D -e -f /etc/ssh/my_sshd_config"
