@@ -77,9 +77,9 @@
 
      <link name="leg_2">
          <visual>
-             <origin rpy="0 0 0" xyz="0 0.05 0"/>
+             <origin rpy="0 0 1.57075" xyz="0 0.05 0"/>
              <geometry>
-                 <box size="0.05 0.095 0.015"/>
+                <mesh filename="package://hexapod_desc/meshes/foot_ground.dae"/>
              </geometry>
              <material name="blue"/>
          </visual>
